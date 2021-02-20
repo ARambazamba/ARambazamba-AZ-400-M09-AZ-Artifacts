@@ -7,10 +7,6 @@ variables:
   folder: "FoodCalc"
   dotnetSdkVersion: "5.0.x"
   buildConfiguration: "Release"
-<<<<<<< HEAD
-  dotnetSdkVersion: "5.0.x"
-=======
->>>>>>> ref-pkg-from-feed
 
 steps:
   - task: UseDotNet@2
