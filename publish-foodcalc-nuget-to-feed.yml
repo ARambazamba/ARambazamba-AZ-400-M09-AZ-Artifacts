@@ -36,8 +36,7 @@ steps:
     displayName: "Pack the project - $(buildConfiguration)"    
     inputs:
       command: "pack"
-      workingDirectory: "FoodCalc/"
-      projects: "FoodCalc/FoodCalc.csproj"
+      projects: "/FoodCalc/FoodCalc.csproj"
       arguments: "--no-build --configuration $(buildConfiguration)"
       versioningScheme: byPrereleaseNumber
       majorVersion: "1"
