@@ -33,9 +33,10 @@ steps:
 
 
   - task: DotNetCoreCLI@2
-    displayName: "Pack the project - $(buildConfiguration)"
+    displayName: "Pack the project - $(buildConfiguration)"    
     inputs:
       command: "pack"
+      workingDirectory: "FoodCalc/"
       projects: "FoodCalc/FoodCalc.csproj"
       arguments: "--no-build --configuration $(buildConfiguration)"
       versioningScheme: byPrereleaseNumber
