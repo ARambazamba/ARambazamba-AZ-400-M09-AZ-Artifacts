@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.16.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.1.21102.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-preview.1.21102.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.3" />
     <PackageReference Include="Microsoft.Graph" Version="3.24.0" />
     <PackageReference Include="Microsoft.Graph.Auth" Version="1.0.0-preview.6" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.26.0" />
