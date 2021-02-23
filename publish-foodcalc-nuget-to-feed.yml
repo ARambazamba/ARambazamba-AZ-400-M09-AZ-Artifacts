@@ -36,7 +36,7 @@ steps:
     displayName: "Pack the project - $(buildConfiguration)"
     inputs:
       command: "pack"
-      projects: "**/*.csproj"
+      projects: "$(folder)/*.csproj"
       arguments: "--no-build --configuration $(buildConfiguration)"
       versioningScheme: byPrereleaseNumber
       majorVersion: "1"
