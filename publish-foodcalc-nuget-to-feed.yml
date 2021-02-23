@@ -14,11 +14,6 @@ steps:
     inputs:
       version: "$(dotnetSdkVersion)"
 
-  - task: NuGetToolInstaller@0
-    inputs:
-      versionSpec: "5.8.1"
-      checkLatest: true
-
   - task: DotNetCoreCLI@2
     displayName: "Restore project dependencies"
     inputs:
