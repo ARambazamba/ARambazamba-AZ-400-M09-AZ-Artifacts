@@ -5,7 +5,7 @@ variables:
   proj: "AZ-400-M09-DependencyManagement"
   feed: "FoodApp"
   folder: "FoodCalc"
-  dotnetSdkVersion: "5.0.x"
+  dotnetSdkVersion: "5.x"
   buildConfiguration: "Release"
 
 steps:
