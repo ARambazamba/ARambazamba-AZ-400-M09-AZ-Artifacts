@@ -31,17 +31,14 @@ steps:
     inputs:
       script: 'dir'
 
-
   - task: DotNetCoreCLI@2
-    displayName: "Pack the project - $(buildConfiguration)"    
     inputs:
-      command: "pack"
-      projects: "/FoodCalc/FoodCalc.csproj"
-      arguments: "--no-build --configuration $(buildConfiguration)"
-      versioningScheme: byPrereleaseNumber
-      majorVersion: "1"
-      minorVersion: "0"
-      patchVersion: "0"
+      command: 'pack'
+      packagesToPack: 'FoodCalc/FoodCalc.csproj'
+      versioningScheme: 'byPrereleaseNumber'
+      majorVersion: '1'
+      minorVersion: '0'
+      patchVersion: '0'
 
   - task: NuGetCommand@2
     displayName: "Publish NuGet package"
