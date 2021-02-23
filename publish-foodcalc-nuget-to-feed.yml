@@ -18,14 +18,14 @@ steps:
     displayName: "Restore project dependencies"
     inputs:
       command: "restore"
-      projects: "$(folder)/FoodCalc.csproj"
+      projects: "FoodCalc/FoodCalc.csproj"
 
   - task: DotNetCoreCLI@2
     displayName: "Build the project - $(buildConfiguration)"
     inputs:
       command: "build"
       arguments: "--no-restore --configuration $(buildConfiguration)"
-      projects: "$(folder)/FoodCalc.csproj"
+      projects: "FoodCalc/FoodCalc.csproj"
 
   - task: CmdLine@2
     inputs:
