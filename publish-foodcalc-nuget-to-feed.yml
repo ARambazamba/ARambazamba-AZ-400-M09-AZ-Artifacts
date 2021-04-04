@@ -1,4 +1,4 @@
-name: "build-simple-net-core-api-yaml"
+name: "build-dependency"
 
 trigger:
   branches:
