@@ -2,7 +2,7 @@ pool:
   vmImage: "ubuntu-20.04"
 
 variables:
-  proj: "AZ-400-M09-DependencyManagement"
+  proj: "M09-DependencyManagement"
   feed: "FoodApp"
   folder: "FoodCalc"
   dotnetSdkVersion: "5.x"
@@ -26,10 +26,6 @@ steps:
       command: "build"
       arguments: "--no-restore --configuration $(buildConfiguration)"
       projects: "FoodCalc/FoodCalc.csproj"
-
-  - task: CmdLine@2
-    inputs:
-      script: 'dir'
 
   - task: DotNetCoreCLI@2
     inputs:
