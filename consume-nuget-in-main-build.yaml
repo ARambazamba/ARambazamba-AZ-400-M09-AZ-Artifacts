@@ -1,10 +1,18 @@
+name: "consume-dependency"
+
 trigger:
-  - "*"
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - FoodApi/*
 
 pool:
   vmImage: "ubuntu-20.04"
 
 variables:
+  proj: "M09-DependencyManagement"
   feed: "FoodApp"
   folder: "FoodApi"
   dotnetSdkVersion: "5.0.x"
@@ -28,10 +36,10 @@ steps:
   - task: NuGetCommand@2
     displayName: "Restore project dependencies"
     inputs:
-      command: "restore"
-      restoreSolution: "$(folder)/*.csproj"
-      feedsToUse: "select"
-      vstsFeed: "f2bbbb52-37bf-478e-9e11-f51f4e769e9c/ff76dacb-1259-4cb4-a4c7-3c0d37e3ec75"
+      command: 'restore'
+      restoreSolution: $(folder)/*.csproj
+      feedsToUse: 'select'
+      vstsFeed: $(proj)/$(feed)
 
   - task: DotNetCoreCLI@2
     displayName: "Build the project - $(buildConfiguration)"
